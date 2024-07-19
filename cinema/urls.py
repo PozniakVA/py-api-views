@@ -6,14 +6,14 @@ from cinema.views import (
     GenreDetail,
     ActorList,
     ActorDetail,
-    CinemaHallList,
-    CinemaHallDetail, MovieViewSet,
+    CinemaHallViewSet,
+    MovieViewSet,
 )
 
-cinema_hall_list = CinemaHallList.as_view(
+cinema_hall_list = CinemaHallViewSet.as_view(
     actions={"get": "list", "post": "create"}
 )
-cinema_hall_detail = CinemaHallDetail.as_view(
+cinema_hall_detail = CinemaHallViewSet.as_view(
     actions={
         "get": "retrieve",
         "put": "update",
